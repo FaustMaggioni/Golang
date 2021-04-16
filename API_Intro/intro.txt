@@ -1,1 +1,3 @@
-Hola
+MVC: 
+Model (notify - update) Controller (update - user action) View 
+
