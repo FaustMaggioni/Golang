@@ -4,7 +4,7 @@ import (
     //"fmt"
 	"net/http"
 	"encoding/json"
-	"/structs/structs.go"
+	"github.com/FaustMaggioni/Golang/tree/main/API_Intro/API_todo/structs"
     )
 
 // JSON API
