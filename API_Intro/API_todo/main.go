@@ -4,11 +4,10 @@ import (
     //"fmt"
 	"net/http"
 	"encoding/json"
-	"github.com/FaustMaggioni/Golang/tree/main/API_Intro/API_todo/structs"
+	"./structs"
     )
 
 // JSON API
-
 
 
 func main(){
@@ -16,7 +15,7 @@ func main(){
 	mux := http.NewServeMux()
 	mux.HandleFunc(ping,func(w http.ResponseWriter, r *http.Request){
 		if r.Method == http.MethodGet {
-			data:= structs.Response{
+			data:= views.Response{
 				Code: http.StatusOK,
 				Body: "pong",
 			}
@@ -24,5 +23,5 @@ func main(){
 			JSON.NewEncoder(w).Encode(data)
 		}
 	})
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":3000", mux)
 }
