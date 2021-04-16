@@ -1,0 +1,10 @@
+atómicos:
+- int, int32, int64, uint,uin32, uint64, string
+// u: unsigned
+unsafe:
+- pointers
+
+abstractos
+- map[] <datatype>
+- struct{}
+- interface{}
